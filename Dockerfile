@@ -2,9 +2,11 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY package.json ./
+COPY package*.json ./
 
-RUN yarn add
+COPY yarn*.lock ./
+
+RUN yarn install
 
 COPY . .
 
