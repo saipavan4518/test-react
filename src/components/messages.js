@@ -20,7 +20,7 @@ export default class Messages extends Component {
         })
     }
     onclick(e){
-        const url = "http://localhost:4000/post"
+        const url = "http://localhost:7000/post"
         const data = {
             "msg": this.state.message
         }
