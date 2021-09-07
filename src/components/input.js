@@ -12,7 +12,7 @@ export default class Input extends Component {
     componentDidUpdate(prevProps){
         if(prevProps.newm !== this.props.newm){
             console.log("UPDATE")
-            const url = "http://localhost:4000/get"
+            const url = "http://localhost:7000/get"
             axios.get(url)
                 .then((data)=>{
                     const d = data.data["message"]
@@ -44,7 +44,7 @@ export default class Input extends Component {
         }
     }
     componentDidMount(){
-            const url = "http://localhost:4000/get"
+            const url = "http://localhost:7000/get"
             axios.get(url)
                 .then((data)=>{
                     const d = data.data["message"]
